@@ -3,14 +3,14 @@
 This is a simple yet only known effective method to calculate google drive folder size using Python.
 Works for both gdrive file and folder. Uses Drive Api v3.
 
-# Also calculates total number of files and folders inside whole tree
+## Also calculates total number of files and folders inside whole tree
 
 It returns a dict contains name, size, size in bytes, total number of files and total number of folders
 of the given gdrive file/folder's link/fileID.
 
 The keys in the dict are name, size, bytes, files and folders.
 
-# All you need to do is this:
+## All you need to do is this:
 1) Build a service to pass to the GoogleDriveSizeCalculate class. (Notes to build are given inside the bottom of the script itself.)
 2) Send the fileid or url of your file/folder on Google Drive (File associated with the account you using OR sharable links ONLY)
 
