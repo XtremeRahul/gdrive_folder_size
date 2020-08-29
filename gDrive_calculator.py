@@ -58,8 +58,7 @@ class GoogleDriveSizeCalculate:
                     print(file_id)
                     return
             except (KeyError, IndexError):
-                msg = f"GDrive ID could not be found in the provided link."
-                print(msg)
+                print("GDrive ID could not be found in the provided link.")
                 return
         else:
             file_id = LINKorID.strip()
