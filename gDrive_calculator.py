@@ -28,7 +28,6 @@ def get_readable_file_size(size_in_bytes) -> str:
 class GoogleDriveSizeCalculate:
     def __init__(self, service=None):
         self.__G_DRIVE_DIR_MIME_TYPE = "application/vnd.google-apps.folder"
-        self.__OAUTH_SCOPE = ['https://www.googleapis.com/auth/drive']
         self.__service = service
         if service is None:
             print("Pass service to GoogleDriveSizeCalculate class.")
