@@ -81,10 +81,9 @@ class GoogleDriveSizeCalculate:
         except Exception as e:
             print('\n')
             if 'HttpError' in str(e):
-                h_e = e
-                ori = str(h_e)
+                h_e = str(e)
+                ori = h_e
                 try:
-                    h_e = ori
                     h_e = h_e.replace('<', '').replace('>', '')
                     h_e = h_e.split('when')
                     f = h_e[0].strip()
