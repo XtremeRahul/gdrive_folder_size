@@ -6,13 +6,15 @@ Works for both gdrive file and folder. Uses Drive Api v3.
 ## Also calculates total number of files and folders inside whole tree
 
 It returns a dict contains name, size, size in bytes, total number of files and total number of folders
-of the given gdrive file/folder's link/fileID.
+of the given gdrive file/folder's link/fileID. 
 
 The keys in the dict are name, size, bytes, files and folders.
 
 ## All you need to do is this:
-1) Build a service to pass to the GoogleDriveSizeCalculate class. (Notes to build are given inside the bottom of the script itself.)
-2) Send the fileid or url of your file/folder on Google Drive (File associated with the account you using OR sharable links ONLY)
+1) ```pip3 install -r requirements.txt```
+2) Create a **service** to pass to the GoogleDriveSizeCalculate class. (Notes to build are given inside the bottom of the script itself)
+3) ```python3 -m gDrive_calculator.py```
+4) On terminal, input the url or fileid of your file/folder on Google Drive (File associated with the account you using OR sharable links ONLY)
 
 ## Output Example:
 ```
