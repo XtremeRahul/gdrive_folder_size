@@ -12,8 +12,8 @@ The keys in the dict are name, size, bytes, files and folders.
 
 ## All you need to do is this:
 1) ```pip3 install -r requirements.txt```
-2) Create a **service** to pass to the GoogleDriveSizeCalculate class. (Notes to build are given inside the bottom of the script itself)
-3) ```python3 -m gDrive_calculator.py```
+2) Create a **service** to pass to the GoogleDriveSizeCalculate class. (Notes to create are given inside the bottom of the script itself)
+3) ```python3 gDrive_calculator.py```
 4) On terminal, input the url or fileid of your file/folder on Google Drive (File associated with the account you using OR sharable links ONLY)
 
 ## Output Example:
