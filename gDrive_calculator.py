@@ -30,7 +30,7 @@ class GoogleDriveSizeCalculate:
         self.__G_DRIVE_DIR_MIME_TYPE = "application/vnd.google-apps.folder"
         self.__service = service
         if service is None:
-            print("Pass service to GoogleDriveSizeCalculate class.")
+            print("Pass service to GoogleDriveSizeCalculate class. Please fully read the instructions given in the repo.")
             return
         self.main_name = None
         self.total_bytes = 0
@@ -141,9 +141,8 @@ class GoogleDriveSizeCalculate:
                 self.total_files += 1
                 self.gDrive_file(**file_)
 
-
-
 #
+# ~ Notes ~
 # BUILD YOUR SERVICE HERE AND PASS TO THE GoogleDriveSizeCalculate CLASS
 #
 credentials = None
@@ -182,7 +181,7 @@ LINKorID = input("Paste your GoogleDrive file/folder's link/fileId : ")
 calculator = GoogleDriveSizeCalculate()  #(service)   ##Complete building service and then pass it
 calculate = calculator.gdrive_checker(LINKorID)
 
-## Note that, gdrive folder size calculating speed depends on how many file inside a folder.
+## Note that, gdrive folder size calculating speed depends on how many files inside a folder.
 
 if not calculate is None:
     print('\n')
