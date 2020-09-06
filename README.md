@@ -5,10 +5,10 @@ Works for both gdrive file and folder. Uses Drive Api v3.
 
 ## Also calculates total number of files and folders inside whole tree
 
-It returns a dict contains name, size, size in bytes, total number of files and total number of folders
+It returns a dict contains name, size, size in bytes, type, total number of files and total number of folders
 of the given gdrive file/folder's link/fileID. 
 
-The keys in the dict are name, size, bytes, files and folders.
+The keys in the dict are name, size, bytes, type, files and folders.
 
 ## All you need to do is this:
 1) ```pip3 install -r requirements.txt```
@@ -20,6 +20,7 @@ The keys in the dict are name, size, bytes, files and folders.
 ```
 Name: Channel Zero (2016) Season 1-4 S01-S04 
 Size: 38.25GB
+Type: Folder
 Bytes: 41074136619
 Files: 24
 Folders: 5
