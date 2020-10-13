@@ -1,7 +1,7 @@
 # GDrive Folder Size Calculator
 
 This is a simple yet only known effective method to calculate google drive folder size using Python.
-Works for both gdrive file and folder. Uses Drive Api v3.
+Works for both gdrive file and folder. Uses Drive Api v3. It is scripted to be usable on terminal, the major application of this script is that you can use it on your gDrive projects by simply modifying it to your needs.
 
 ## Also calculates total number of files and folders inside whole tree
 
