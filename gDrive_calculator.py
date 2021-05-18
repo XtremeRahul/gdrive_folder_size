@@ -1,6 +1,7 @@
 import re
 import os
 import pickle
+import time
 
 import urllib.parse as urlparse
 from urllib.parse import parse_qs
@@ -10,6 +11,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
+stt = time.time()
 
 def get_readable_file_size(size_in_bytes) -> str:
     SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
@@ -193,6 +195,9 @@ calculate = calculator.gdrive_checker(LINKorID)
 
 
 # Note that, gdrive folder size calculating speed depends on how many files inside a folder.
+hours, rem = divmod((time.time() - stt),3600)
+minutes, sec = divmod(rem,60)
+print("Elapsed Time:\n{:0>2}:{:0>2}:{:05.2f}".format(int(hours),int(minutes),sec))
 
 if not calculate is None:
     print('\n')
