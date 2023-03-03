@@ -70,8 +70,7 @@ class GoogleDriveSizeCalculate:
 		print("\nCalculating... Please Wait!")
 
 		try:
-			drive_file = self.__service.files().get(fileId=file_id, fields="id, name, mimeType, size",
-												   supportsTeamDrives=True).execute()
+			drive_file = self.__service.files().get(fileId=file_id, fields="id, name, mimeType, size", supportsTeamDrives=True).execute()
 			name = drive_file['name']
 			if drive_file['mimeType'] == self.__G_DRIVE_DIR_MIME_TYPE:
 				typee = 'Folder'
@@ -120,11 +119,11 @@ class GoogleDriveSizeCalculate:
 		files = []
 		while True:
 			response = self.__service.files().list(supportsTeamDrives=True,
-												  includeTeamDriveItems=True,
-												  q=query, spaces='drive',
-												  fields=fields, pageToken=page_token,
-												  pageSize=page_size, corpora='allDrives',
-												  orderBy='folder, name').execute()
+						includeTeamDriveItems=True,
+						q=query, spaces='drive',
+						fields=fields, pageToken=page_token,
+						pageSize=page_size, corpora='allDrives',
+						orderBy='folder, name').execute()
 			files.extend(response.get('files', []))
 			page_token = response.get('nextPageToken', None)
 			if page_token is None:
